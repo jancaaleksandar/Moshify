@@ -136,8 +136,15 @@ a {
   width: 40px;
   height: 40px;
 }
+.icon--small{
+   width: 30px;
+   height: 30px; 
+}
 .icon--primary {
   fill: var(--color-primary);
+}
+.icon--white{
+    fill: white;
 }
 .icon-container {
   background: #f3f9fa;
@@ -147,6 +154,9 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+.icon-container--accent{
+    background-color: var(--color-accent);
 }
 /* Buttons */
 .btn {
@@ -327,42 +337,67 @@ a {
 .quote__text::after {
   content: close-quote;
 }
-.quote__author{
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 0;
+.quote__author {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 0;
 }
-.quote__organization{
-    font-style: normal;
-    color: var(--color-headings);
-    opacity: .4;
-    font-size: 2rem;
-
+.quote__organization {
+  font-style: normal;
+  color: var(--color-headings);
+  opacity: 0.4;
+  font-size: 2rem;
 }
-.quote__line{
-    position: relative;
-    bottom: 10px;
+.quote__line {
+  position: relative;
+  bottom: 10px;
 }
-@media screen and (min-width: 1024px){
-    .quote{
-        font-size: 2em;
-    }
-    .quote__author{
-        font-size: 2.4rem;
-    }
-    .quote__organization{
-        font-size: 1.6rem;
-    }
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2em;
+  }
+  .quote__author {
+    font-size: 2.4rem;
+  }
+  .quote__organization {
+    font-size: 1.6rem;
+  }
 }
 /* Grids */
-.grid{
-    display: grid;
+.grid {
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-@media screen and (min-width: 768px){
-    .grid--1x2{
-        grid-template-columns: 1fr 1fr;
+/* Testimonials */
+.testimonial {
+  padding: 3rem;
+}
+.testimonial__image{
+    position: relative;
+}
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image> .icon-container{
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+}
+@media screen and (min-width: 768px) {
+
+    .testimonial .quote .testimonial .quote__author{
+        font-size: 2.4rem;
     }
+    .testimonail .quote{
+        margin-left: 6rem;
+    }
+
 }
