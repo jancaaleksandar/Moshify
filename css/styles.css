@@ -274,10 +274,16 @@ a {
   background: var(--color-secondary);
   color: #fff;
 }
+.card--primary .badge--primary {
+  background: #126de4;
+}
 .card--secondary .bagde--secondary {
   background: #02cdf1;
 }
 /* Plan */
+.plan {
+  transition: transform 0.2s ease-out;
+}
 .plan__name {
   color: white;
   margin: 0;
@@ -302,6 +308,7 @@ a {
 .plan .list__item {
   margin-bottom: 2rem;
 }
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -313,6 +320,7 @@ a {
   top: -6px;
   right: 5%;
 }
+
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
@@ -320,8 +328,17 @@ a {
   .plan__price {
     font-size: 5rem;
   }
+  .plan--popular {
+    transform: scale(1.1);
+  }
   .plan__billing-cycle {
     font-size: 1.6rem;
+  }
+  .plan:hover {
+    transform: scale(1.1);
+  }
+  .plan--popular:hover {
+    transform: scale(1.15);
   }
   .plan__description {
     font-size: 1.7rem;
@@ -388,6 +405,11 @@ a {
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -578,24 +600,34 @@ a {
   }
 }
 /* Domain Block */
-.block-domain .input-group{
-    box-shadow: 0 0 30px 20px #e6ebee;
-    border: 0;
-    margin: 4rem auto;
-    max-width: 67rem;
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 67rem;
 }
-.block-domain__prices{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2 6rem);
-    font-size: 2rem;
-    font-weight: 600;
-    justify-items: center;
-    max-width: 70rem;
-    margin: 0 auto;
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 70rem;
+  margin: 0 auto;
 }
-@media screen and (min-width: 768px){
-    .block-domain__prices{
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    }
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+/* Plans-Block */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media screen {
 }
