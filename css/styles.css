@@ -745,4 +745,11 @@ a {
     .footer__heading{
         font-size: 1.6rem;
     }
+    .collapsible__content{
+        padding-right: 3rem;
+        
+    }
+    .li__footer-all{
+        margin-bottom: 2.3rem;
+    }
 }
