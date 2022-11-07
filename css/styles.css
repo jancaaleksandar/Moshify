@@ -561,7 +561,7 @@ a {
   margin: 0;
 }
 .nav__item {
-  padding: 0.5 2rem;
+  padding: 0.5rem 2rem;
   border-bottom: 1px solid #222;
 }
 .nav__item > a {
@@ -631,7 +631,7 @@ a {
   color: var(--color-headings);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2 6rem);
+  grid-template-rows: 6rem 6rem;
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
