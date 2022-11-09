@@ -1,7 +1,10 @@
 {
-  "name": "moshify",
+  "name": "Moshify",
   "version": "1.0.0",
-  "main": "index.html",
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html"
